@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Local envs
+.venv/
+venv/
+
+# OS files
+.DS_Store

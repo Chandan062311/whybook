@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WhyBook: The Multiverse Operations</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#303030",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-fixed": "#ffdad6",
+                    "on-background": "#1b1b1b",
+                    "on-surface": "#1b1b1b",
+                    "background": "#f9f9f9",
+                    "secondary-fixed": "#dae2ff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#001848",
+                    "surface-dim": "#dadada",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#211b00",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f1f1f1",
+                    "inverse-primary": "#ffb3ad",
+                    "on-primary-fixed": "#410003",
+                    "surface-tint": "#bb161f",
+                    "on-tertiary-container": "#4a3f00",
+                    "tertiary-container": "#c5ab02",
+                    "on-error-container": "#93000a",
+                    "surface": "#f9f9f9",
+                    "secondary-container": "#366ee5",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#dc3132",
+                    "tertiary-fixed": "#ffe24c",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#fefcff",
+                    "surface-container": "#eeeeee",
+                    "on-primary-container": "#fffbff",
+                    "outline": "#906f6c",
+                    "on-primary-fixed-variant": "#930010",
+                    "surface-bright": "#f9f9f9",
+                    "secondary": "#0954cb",
+                    "tertiary": "#6d5e00",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-fixed-dim": "#b2c5ff",
+                    "primary": "#b8121d",
+                    "outline-variant": "#e4bdba",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "on-surface-variant": "#5b403d",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#0040a1",
+                    "surface-container-highest": "#e2e2e2",
+                    "tertiary-fixed-dim": "#e2c62d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-bg {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(rgba(0,0,0,0.1) 1.5px, transparent 1.5px);
+            background-size: 10px 10px;
+        }
+        .caution-border {
+            border: 8px solid;
+            border-image-source: repeating-linear-gradient(45deg, #000, #000 10px, #fbbf24 10px, #fbbf24 20px);
+            border-image-slice: 8;
+        }
+        .speech-bubble-tail-bottom {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 60% 85%, 50% 100%, 40% 85%, 0% 85%);
+        }
+        .speech-bubble-tail-left {
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 15% 45%, 0% 35%, 15% 25%);
+        }
+        .comic-card {
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .comic-card:active, .comic-card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px #000 !important;
+        }
+        .text-outline-smash {
+            -webkit-text-stroke: 1.5px black;
+        }
+    </style>
+</head>
+<body class="halftone-bg text-on-surface font-body min-h-screen overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full sticky top-0 z-50 bg-white border-4 border-black rotate-1 mb-6 shadow-[8px_8px_0px_#000]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl font-black text-black">menu</span>
+<h1 class="text-4xl font-black text-red-600 italic skew-x-[-12deg] drop-shadow-[4px_4px_0px_rgba(253,224,71,1)] [text-shadow:2px_2px_0px_#000] font-headline uppercase">WHYBOOK</h1>
+</div>
+                <div class="hidden md:flex gap-8 font-headline font-black uppercase italic -rotate-1">
+<a class="text-red-600 underline decoration-4 underline-offset-4 hover:bg-yellow-400 hover:text-black transition-all" href="https://huggingface.co/spaces/Stinger2311/whybook-gradio-demo" target="_blank" rel="noopener noreferrer">LIVE DEMO</a>
+<a class="text-black hover:bg-yellow-400 hover:text-black transition-all" href="#artifacts">ARTIFACTS</a>
+<a class="text-black hover:bg-yellow-400 hover:text-black transition-all" href="#files">THE LAB</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl font-black text-black">search</span>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 py-8 space-y-24">
+<!-- Panel 1: Origin Story (HERO - Unchanged) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-5 -rotate-2 relative">
+<div class="bg-primary-container border-4 border-black p-2 shadow-[12px_12px_0px_#000]">
+<img alt="Stack of old dusty physics textbooks" class="w-full grayscale contrast-125 border-4 border-black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZb6BRm1VwM9n_JNufS25_OVJjYifkUybPYptarbFNThW4FRwt90PwdIRnrBgTSJfBCvgZ1gzsCmQ_-c4H6CGeByYWEeSjeXCdTDSgGiNJB44MzMe8p6tE-YlG0yAO5DM2chv4wbQln5hQ4PkpeGHDVJllAGkSsfy3kL1ayaMDSDodjKV0wwIT07YbBwtnihJrIhUZ_ZHDAimRyHoGhmgz48F4GummyyCYb1Bn6FlHFet0MQbVUzG2dd0OckyBkFxO_MoBzY5Xd7A"/>
+</div>
+<div class="absolute -top-8 -left-6 bg-tertiary-fixed border-4 border-black px-6 pt-2 pb-6 rotate-[-5deg] shadow-[6px_6px_0px_#000] speech-bubble-tail-bottom">
+<h2 class="font-headline font-black text-2xl uppercase italic">The Offline Dilemma!</h2>
+</div>
+</div>
+<div class="md:col-span-7 flex flex-col items-start gap-6">
+<div class="bg-white border-4 border-black p-8 shadow-[10px_10px_0px_#0954cb] relative">
+<div class="absolute -top-4 left-10 bg-primary text-white font-headline font-bold px-4 py-1 border-2 border-black uppercase text-sm">NARRATOR</div>
+<p class="text-2xl font-bold leading-tight font-headline italic">
+                        Physical textbooks lack active retrieval! Students are drowning in static pages while the world moves at light-speed. 
+                        <span class="text-primary underline decoration-4">Students need the 'Why'!</span>
+</p>
+</div>
+<div class="bg-yellow-400 border-4 border-black speech-bubble-tail-left shadow-[8px_8px_0px_#000] flex items-center justify-center py-4 pr-4 pl-10 self-end rotate-3">
+<span class="font-headline font-black text-xl text-center uppercase tracking-tighter">BOOM! LOGIC GAP!</span>
+</div>
+</div>
+</section>
+<!-- NEW SECTION: The Payload Schema! -->
+<section class="space-y-8">
+<h2 class="font-headline font-black text-6xl text-center uppercase skew-x-[-8deg] tracking-tighter [text-shadow:4px_4px_0px_#0954cb]">
+                The <span class="text-primary italic">Payload</span> Schema!
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- WHAT -->
+<div class="comic-card bg-red-600 border-4 border-black p-8 shadow-[8px_8px_0px_#000] rotate-1 text-white">
+<h3 class="font-headline font-black text-4xl uppercase mb-4 italic skew-x-[-10deg]">WHAT?</h3>
+<p class="font-bold text-lg leading-tight uppercase">The core concept: A dynamic knowledge graph that adapts to student inquiry in real-time. No more static text!</p>
+</div>
+<!-- WHY -->
+<div class="comic-card bg-blue-600 border-4 border-black p-8 shadow-[8px_8px_0px_#000] -rotate-1 text-white">
+<h3 class="font-headline font-black text-4xl uppercase mb-4 italic skew-x-[10deg]">WHY?</h3>
+<p class="font-bold text-lg leading-tight uppercase">Pedagogical active retrieval. By forcing the "Why", we bypass rote memorization and build deep neural connections.</p>
+</div>
+<!-- REAL WORLD -->
+<div class="comic-card bg-yellow-400 border-4 border-black p-8 shadow-[8px_8px_0px_#000] rotate-1 text-black">
+<h3 class="font-headline font-black text-4xl uppercase mb-4 italic skew-x-[-10deg]">REAL WORLD</h3>
+<p class="font-bold text-lg leading-tight uppercase">From classroom labs to garage builds—connecting abstract physics to the tangible tools in your hands.</p>
+</div>
+</div>
+</section>
+<!-- RESTRUCTURED PIPELINE -->
+<section class="relative space-y-12">
+<h2 class="font-headline font-black text-5xl uppercase italic -rotate-1 bg-black text-white inline-block px-8 py-2 border-4 border-red-600 shadow-[8px_8px_0px_#fde047]">
+                The Multiverse Pipeline!
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-2 bg-black -translate-x-1/2 hidden lg:block"></div>
+<!-- Phase 0 -->
+<div class="flex justify-end items-center">
+<div class="comic-card bg-white border-4 border-black p-8 w-full max-w-md shadow-[10px_10px_0px_#0954cb] rotate-1">
+<div class="bg-black text-white px-3 py-1 font-black uppercase text-sm mb-2 inline-block">PHASE 0</div>
+<div class="text-5xl font-black text-red-600 italic mb-4 font-headline uppercase tracking-tighter skew-x-[-15deg] drop-shadow-[2px_2px_0px_#000]">POW!</div>
+<p class="text-xl font-bold uppercase mb-2">Environment Boot!</p>
+<div class="bg-surface-container-highest border-2 border-black p-3 font-mono text-xs mb-4">
+                            Kaggle setup, CUDA 12.1 integration, and specialized Python environment.
+                        </div>
+<div class="caution-border bg-yellow-400 p-4 shadow-[4px_4px_0px_#000] flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-black">warning</span>
+<p class="font-black text-black text-[10px] uppercase tracking-tighter">DANGER: Kaggle T4 15GB VRAM Limit! OPTIMIZE OR PERISH!</p>
+</div>
+</div>
+</div>
+<!-- Phase 1 -->
+<div class="flex justify-start items-center lg:mt-24">
+<div class="comic-card bg-tertiary-container border-4 border-black p-8 w-full max-w-md shadow-[-10px_10px_0px_#000] -rotate-2">
+<div class="bg-black text-white px-3 py-1 font-black uppercase text-sm mb-2 inline-block">PHASE 1</div>
+<div class="text-5xl font-black text-blue-600 italic mb-4 font-headline uppercase tracking-tighter skew-x-[15deg] drop-shadow-[2px_2px_0px_#000]">THWIP!</div>
+<p class="text-xl font-bold uppercase mb-4">Synthetic Yield!</p>
+<p class="text-sm font-bold uppercase mb-4">90 Curated QA Pairs generated via OpenAI JSON schema injection for maximum precision.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-black text-white px-2 py-1 text-xs font-bold uppercase">90 QA PAIRS</span>
+<span class="bg-black text-white px-2 py-1 text-xs font-bold uppercase">OPENAI JSON</span>
+</div>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="flex justify-end items-center lg:-mt-12">
+<div class="comic-card bg-primary border-4 border-black p-8 w-full max-w-md shadow-[10px_10px_0px_#fde047] rotate-2 text-white">
+<div class="bg-white text-black px-3 py-1 font-black uppercase text-sm mb-2 inline-block">PHASE 2</div>
+<div class="text-5xl font-black text-yellow-400 italic mb-4 font-headline uppercase tracking-tighter skew-x-[-10deg] text-outline-smash drop-shadow-[4px_4px_0px_#000]">SMASH!</div>
+<p class="text-xl font-bold uppercase">Unsloth Training!</p>
+<ul class="mt-4 space-y-1 font-black text-xs uppercase italic">
+<li>⚡ QLoRA Fine-tuning</li>
+<li>⚡ Rank 16 / Alpha 32</li>
+<li>⚡ Peak VRAM: 12.1 GB</li>
+</ul>
+<p class="mt-6 font-black text-lg bg-black text-center py-2 uppercase tracking-widest text-yellow-400">BEATING OOM CRASHES!</p>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="flex justify-start items-center lg:mt-12">
+<div class="comic-card bg-secondary border-4 border-black p-8 w-full max-w-md shadow-[-10px_10px_0px_#000] -rotate-1 text-white">
+<div class="bg-black text-white px-3 py-1 font-black uppercase text-sm mb-2 inline-block">PHASE 3</div>
+<div class="text-5xl font-black text-green-500 italic mb-4 font-headline uppercase tracking-tighter skew-x-[10deg] drop-shadow-[2px_2px_0px_#000]">ZAP!</div>
+<p class="text-xl font-bold uppercase mb-4">GGUF Export!</p>
+<p class="text-sm font-bold mb-4 uppercase">Quantization to 4-bit precision for lightning-fast edge inference.</p>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-5xl">memory</span>
+<span class="font-black text-2xl uppercase">4-BIT INFERENCE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- THE ASSETS -->
+<section class="space-y-12">
+<h2 class="font-headline font-black text-6xl text-center uppercase skew-x-[-10deg] tracking-tighter [text-shadow:4px_4px_0px_#fde047]">
+                Payload <span class="text-primary italic">Artifacts</span>
+</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="artifacts">
+<!-- Card 1 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] rotate-2 flex flex-col h-full">
+<div class="h-40 bg-zinc-200 border-4 border-black mb-4 overflow-hidden">
+<img alt="Abstract circuit board pattern" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD74RS-BAec5Ty5agmxlIA2FGB7Lcz04BbL1G_tjWkaZRqsA9ppilhuavgzesl5rX1SO6uezfxTNGDApIBVzStRwsT_vd7X7ZAAjjOMVQRoHwNtAW0wV5a3MJPzYZdmSILZi1J-61ZSfhbOGR_pWHp6ZM37CUbYyAWSz-Se42xVOuO5meDOnLUz-b2tjInud5oGATF9Z02wHeS6NH79BFJ1bSZPzHTrzrW39EB9muedE1rw7NWrWSSruJesCPS8kO7A0LnZsU4XtdU"/>
+</div>
+<h3 class="font-headline font-black text-2xl uppercase mb-2">Dataset</h3>
+<p class="text-sm font-bold uppercase opacity-70 mb-4 flex-grow">90 validated NCERT-style tutoring records</p>
+<a class="comic-card w-full bg-primary text-white border-4 border-black py-2 font-headline font-black uppercase italic shadow-[6px_6px_0px_#000] text-center no-underline" href="https://huggingface.co/datasets/Stinger2311/whybook-chemistry-dataset" target="_blank" rel="noopener noreferrer">VIEW HUB</a>
+</div>
+<!-- Card 2 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] -rotate-1 flex flex-col h-full">
+<div class="h-40 bg-zinc-200 border-4 border-black mb-4 overflow-hidden">
+<img alt="Server rack with red lights" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYP2_6QNv-yGGtXq1bnuYfd0deHSASUJ4t2dwm2TnT0XBRoGhRYeOdPHC_0ocSs3xdzW5B-WCwdSmqj58PAfQikf4tMyeQ-Je6ZkfEN5_ueT6wOHpxtD3swwMx7Yjdv3btkai7McNFLM2tqnadfDcMGdsIhizfjWIa0IPTgBg4p4jwWVAMUwXyJQNW6RZqgFFHXNIEGoBgh5hfd4t6_Ai2kRQ6Cu7ZxisF-cYBxXiVH0sVf5MluxVdr9hb9vRg7do7HOVJwgjs8ZI"/>
+</div>
+<h3 class="font-headline font-black text-2xl uppercase mb-2">LoRA Weights</h3>
+<p class="text-sm font-bold uppercase opacity-70 mb-4 flex-grow">Published Gemma 4 E2B LoRA adapters</p>
+<a class="comic-card w-full bg-black text-white border-4 border-black py-2 font-headline font-black uppercase italic shadow-[6px_6px_0px_#000] text-center no-underline" href="https://huggingface.co/Stinger2311/whybook-gemma4-e2b-lora" target="_blank" rel="noopener noreferrer">DOWNLOAD</a>
+</div>
+<!-- Card 3 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] rotate-1 flex flex-col h-full">
+<div class="h-40 bg-zinc-200 border-4 border-black mb-4 overflow-hidden">
+<img alt="3D geometric shape" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhKJLpAGzONZmAI1MZLhWrsGAf2kZlOkv0EqUjc83UbWfj7TxWEHOSftYkestx2VVslRRQC_Fv2n88jaHoJY-JaOMvLS_rKdrt6L7UiRtmRoEQkgyfjR-AZOSN9S169B6xx6OogZJKIs5DuitsvxPlJQ6VQ9Alj0Qb_6_zNvyoUrdVdAIhRcMfqeTGikPs_43hdcy62-xWCNx0s-ntDMojnKpw9WEvcT_gxl1JRqIFJb31Fm3A6zKWNa1JYCvw9WswXt99-wVDnn0"/>
+</div>
+<h3 class="font-headline font-black text-2xl uppercase mb-2">GGUF Binary</h3>
+<p class="text-sm font-bold uppercase opacity-70 mb-4 flex-grow">Q4_K_M GGUF for local inference</p>
+<a class="comic-card w-full bg-tertiary text-white border-4 border-black py-2 font-headline font-black uppercase italic shadow-[6px_6px_0px_#000] text-center no-underline" href="https://huggingface.co/Stinger2311/whybook-gemma4-e2b-gguf" target="_blank" rel="noopener noreferrer">GET BINARY</a>
+</div>
+<!-- Card 4 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] -rotate-2 flex flex-col h-full">
+<div class="h-40 bg-zinc-200 border-4 border-black mb-4 overflow-hidden">
+<img alt="Abstract particle wave" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM3gm-CDuRuq-KOj7Lt_5ZqK9pNQSJPxVoHC2uXfL4PjysL5xwlG0FwTr1zC8cFXTZNt_EExgLlbsjg_bchWCZ-V-39PnEkO0yRuKB9WhKy981D4EEp53_pqeysbj6kh6clAARhVbh3-Mdd8vk3URGOeix6DWAX7ednqAhA4kNYjcUCs2mfhB10Vg2lz3q0qMtRCiDzCNUNug0bLFyMX-DsjZbZXaTo6NLibkDV3W0RrBgYRlK8onxTZzz7fYDG8GHI4uFXgHLlLQ"/>
+</div>
+<h3 class="font-headline font-black text-2xl uppercase mb-2">Gradio Space</h3>
+<p class="text-sm font-bold uppercase opacity-70 mb-4 flex-grow">Public Hugging Face Gradio demo</p>
+<a class="comic-card w-full bg-secondary text-white border-4 border-black py-2 font-headline font-black uppercase italic shadow-[6px_6px_0px_#000] text-center no-underline" href="https://huggingface.co/spaces/Stinger2311/whybook-gradio-demo" target="_blank" rel="noopener noreferrer">ACTIVATE HF!</a>
+</div>
+</div>
+</section>
+<!-- NEW SECTION: Top Secret Files -->
+<section class="space-y-12" id="files">
+<h2 class="font-headline font-black text-5xl uppercase italic -rotate-1 bg-white text-black inline-block px-8 py-2 border-4 border-black shadow-[8px_8px_0px_#0954cb]">
+                Top Secret Files!
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- File 1 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] rotate-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl text-red-600">description</span>
+<h3 class="font-headline font-black text-xl uppercase italic">README.md</h3>
+</div>
+<p class="font-bold text-xs uppercase tracking-tight">Project overview, workflow summary, and direct links to the published model, dataset, and Space.</p>
+</div>
+<!-- File 2 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] -rotate-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl text-blue-600">code_blocks</span>
+<h3 class="font-headline font-black text-xl uppercase italic truncate">Kaggle Notebook</h3>
+</div>
+<p class="font-bold text-xs uppercase tracking-tight">The Phase 2 fine-tuning notebook for Gemma 4 E2B, Unsloth, QLoRA, and GGUF export.</p>
+</div>
+<!-- File 3 -->
+<div class="comic-card bg-white border-4 border-black p-6 shadow-[8px_8px_0px_#000] rotate-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl text-yellow-500">rocket_launch</span>
+<h3 class="font-headline font-black text-xl uppercase italic">HF Space</h3>
+</div>
+<p class="font-bold text-xs uppercase tracking-tight">Published Gradio Space files for the shareable WhyBook chemistry tutor demo.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-700 border-t-8 border-black skew-y-1 mt-12 shadow-[-8px_-8px_0px_#000] flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full min-h-[200px]">
+<div class="-skew-y-1 w-full flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-2xl font-black text-white italic font-headline uppercase">WhyBook Operations</span>
+<p class="font-headline font-bold uppercase tracking-tighter text-yellow-400">© 2024 WhyBook Multiverse Operations</p>
+</div>
+<div class="bg-white border-4 border-black px-8 py-4 rotate-[-1deg] shadow-[8px_8px_0px_#000]">
+<h4 class="font-headline font-black text-3xl uppercase italic tracking-tighter text-black">TO BE CONTINUED...</h4>
+</div>
+<nav class="flex gap-8 font-headline font-bold uppercase tracking-tighter">
+<a class="text-white opacity-80 hover:skew-x-2 hover:text-yellow-200 transition-all" href="https://huggingface.co/datasets/Stinger2311/whybook-chemistry-dataset" target="_blank" rel="noopener noreferrer">Dataset</a>
+<a class="text-white opacity-80 hover:skew-x-2 hover:text-yellow-200 transition-all" href="https://huggingface.co/Stinger2311/whybook-gemma4-e2b-lora" target="_blank" rel="noopener noreferrer">LoRA</a>
+<a class="text-yellow-300 font-black hover:skew-x-2 hover:text-yellow-200 transition-all" href="https://huggingface.co/spaces/Stinger2311/whybook-gradio-demo" target="_blank" rel="noopener noreferrer">Space</a>
+</nav>
+</div>
+</footer>
+</body></html>
