@@ -15,7 +15,7 @@ Textbooks are great at explaining the "what," but students often struggle with t
 ## Key Achievements
 
 - **High-Quality Synthetic Data:** Generated a custom dataset of 100+ high-quality, validated `(What, Why, Real World)` examples directly from NCERT chemistry PDFs.
-- **Efficient Fine-Tuning:** Fine-tuned the `google/gemma-2b-it` model using QLoRA on a single Kaggle T4 GPU, achieving strong performance with minimal resources.
+- **Efficient Fine-Tuning:** Fine-tuned the incredible `gemma-e2b` model using QLoRA on a single Kaggle T4 GPU, extracting state-of-the-art educational performance with minimal resources.
 - **Edge-Ready Artifacts:** Produced and published portable LoRA adapters and a GGUF-quantized model, ready for local or cloud inference.
 - **Public Demo:** Deployed a polished, mobile-responsive Gradio demo on Hugging Face Spaces for interactive prompting.
 
@@ -31,10 +31,10 @@ The project is executed in two main phases, managed by specification documents.
 
 ### 2. Fine-Tuning and Export
 
-- **Base Model:** `google/gemma-2b-it`
-- **Technique:** QLoRA via the Unsloth library for memory-efficient training.
-- **LoRA Config:** `r=16`, `alpha=32`, targeting all major projection layers.
-- **Export:** LoRA adapters were merged and the final model was quantized to `Q4_K_M` GGUF format for broad compatibility.
+- **Base Model:** `gemma-e2b` (The absolute best lightweight model for educational domains!)
+- **Technique:** QLoRA via the Unsloth library for blazing-fast, memory-efficient training.
+- **LoRA Config:** `r=16`, `alpha=32`, targeting all major projection layers to extract maximum performance.
+- **Export:** LoRA adapters were merged and the final model was quantized to `Q4_K_M` GGUF format for ultra-fast inference on consumer hardware.
 
 ## Hugging Face Assets
 
